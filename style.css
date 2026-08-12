@@ -1,0 +1,934 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #080808;
+    color: white;
+}
+
+/* =========================
+   HEADER
+========================= */
+
+header {
+    text-align: center;
+    padding: 30px;
+    background: #101010;
+    border-bottom: 1px solid #242424;
+}
+
+header h1 {
+    font-size: 42px;
+    letter-spacing: 1px;
+}
+
+header p {
+    color: #999999;
+    margin-top: 8px;
+    font-size: 18px;
+}
+
+/* =========================
+   NAVIGATION
+========================= */
+
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+
+    padding: 20px;
+
+    background: #111111;
+    border-bottom: 1px solid #242424;
+}
+
+nav a {
+    color: #dddddd;
+    text-decoration: none;
+    font-size: 16px;
+
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #d4af37;
+}
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+    min-height: 600px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+    padding: 40px;
+
+    background-image:
+        linear-gradient(
+            rgba(0, 0, 0, 0.55),
+            rgba(0, 0, 0, 0.78)
+        ),
+        url("images/mourinho.jpg");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.hero-content {
+    max-width: 850px;
+}
+
+.hero-label {
+    color: #d4af37;
+    font-size: 18px;
+    font-weight: bold;
+
+    letter-spacing: 5px;
+
+    margin-bottom: 15px;
+}
+
+.hero h2 {
+    font-size: 72px;
+    letter-spacing: 3px;
+
+    margin-bottom: 20px;
+}
+
+.hero-description {
+    max-width: 700px;
+
+    margin: auto;
+
+    font-size: 21px;
+    line-height: 1.6;
+
+    color: #eeeeee;
+}
+
+.hero button {
+    margin-top: 35px;
+}
+
+/* =========================
+   BUTTON
+========================= */
+
+button {
+    padding: 15px 30px;
+
+    border: none;
+    border-radius: 5px;
+
+    background: #d4af37;
+    color: #111111;
+
+    font-size: 17px;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+button:hover {
+    transform: translateY(-2px);
+
+    background: #f0d05a;
+}
+
+/* =========================
+   ABOUT
+========================= */
+
+.about {
+    max-width: 900px;
+
+    margin: auto;
+
+    padding: 80px 30px;
+
+    text-align: center;
+}
+
+.about h2 {
+    font-size: 36px;
+
+    margin-bottom: 25px;
+}
+
+.about p {
+    color: #cccccc;
+
+    font-size: 18px;
+
+    line-height: 1.8;
+}
+
+/* =========================
+   CAREER PAGE
+========================= */
+
+.career-page {
+    max-width: 1100px;
+
+    margin: auto;
+
+    padding: 100px 30px;
+}
+
+.section-label {
+    color: #d4af37;
+
+    font-size: 16px;
+
+    font-weight: bold;
+
+    letter-spacing: 5px;
+
+    margin-bottom: 15px;
+}
+
+.career-page h2 {
+    font-size: 52px;
+
+    margin-bottom: 15px;
+}
+
+.career-intro {
+    color: #999999;
+
+    font-size: 18px;
+
+    max-width: 650px;
+
+    line-height: 1.7;
+}
+
+/* =========================
+   CAREER TIMELINE
+========================= */
+
+.career-timeline {
+    position: relative;
+
+    margin-top: 80px;
+}
+
+/* Vertical line */
+
+.career-timeline::before {
+    content: "";
+
+    position: absolute;
+
+    left: 90px;
+    top: 0;
+    bottom: 0;
+
+    width: 2px;
+
+    background: #292929;
+}
+
+/* Career item */
+
+.career-item {
+    position: relative;
+
+    display: grid;
+
+    grid-template-columns: 180px 1fr;
+
+    gap: 40px;
+
+    margin-bottom: 45px;
+}
+
+/* Year */
+
+.career-year {
+    position: relative;
+
+    padding-top: 35px;
+
+    font-size: 20px;
+
+    font-weight: bold;
+
+    color: #d4af37;
+
+    text-align: right;
+}
+
+.career-year2 {
+    position: relative;
+
+    padding-top: 35px;
+
+    font-size: 15px;
+
+    font-weight: bold;
+
+    color: #d4af37;
+
+    text-align: right;
+}
+
+
+/* Golden timeline dot */
+
+.career-year::after {
+    content: "";
+
+    position: absolute;
+
+    right: -16px;
+    top: 38px;
+
+    width: 12px;
+    height: 12px;
+
+    background: #d4af37;
+
+    border-radius: 50%;
+
+    box-shadow: 0 0 0 5px #080808;
+}
+
+/* =========================
+   CAREER CARD
+========================= */
+
+.career-link {
+    display: block;
+
+    color: inherit;
+
+    text-decoration: none;
+}
+
+.career-card {
+    position: relative;
+
+    background:
+        linear-gradient(
+            135deg,
+            #181818,
+            #101010
+        );
+
+    border: 1px solid #292929;
+
+    border-radius: 14px;
+
+    padding: 35px;
+
+    overflow: hidden;
+
+    transition:
+        transform 0.3s ease,
+        border-color 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+/* Gold line */
+
+.career-card::before {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    top: 0;
+    bottom: 0;
+
+    width: 4px;
+
+    background: #d4af37;
+}
+
+/* Hover */
+
+.career-card:hover {
+    transform: translateX(8px);
+
+    border-color: #d4af37;
+
+    box-shadow:
+        0 15px 40px rgba(0, 0, 0, 0.5);
+}
+
+/* Club name */
+
+.career-card h3 {
+    font-size: 34px;
+
+    margin-bottom: 8px;
+}
+
+/* Role */
+
+.role {
+    color: #d4af37;
+
+    font-weight: bold;
+
+    font-size: 15px;
+
+    text-transform: uppercase;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 20px;
+}
+
+/* Description */
+
+.career-card > p {
+    color: #bbbbbb;
+
+    line-height: 1.7;
+
+    max-width: 700px;
+}
+
+/* =========================
+   ACHIEVEMENTS
+========================= */
+
+.career-achievements {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 10px;
+
+    margin-top: 25px;
+}
+
+.career-achievements span {
+    background: #222222;
+
+    border: 1px solid #303030;
+
+    padding: 8px 13px;
+
+    border-radius: 6px;
+
+    font-size: 13px;
+
+    color: #cccccc;
+}
+
+/* =========================
+   VIEW CAREER
+========================= */
+
+.view-career {
+    margin-top: 25px;
+
+    color: #d4af37;
+
+    font-weight: bold;
+
+    font-size: 15px;
+
+    transition: 0.3s;
+}
+
+.career-card:hover .view-career {
+    letter-spacing: 1px;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    text-align: center;
+
+    padding: 35px;
+
+    background: #101010;
+
+    border-top: 1px solid #242424;
+
+    color: #777777;
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 700px) {
+
+    nav {
+        gap: 15px;
+
+        flex-wrap: wrap;
+    }
+
+    .hero h2 {
+        font-size: 45px;
+    }
+
+    .career-page h2 {
+        font-size: 40px;
+    }
+
+    .career-timeline::before {
+        display: none;
+    }
+
+    .career-item {
+        display: block;
+    }
+
+    .career-year {
+        text-align: left;
+
+        padding-bottom: 15px;
+    }
+
+    .career-year::after {
+        display: none;
+    }
+
+    .career-card {
+        padding: 25px;
+    }
+
+}
+.club-title {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.club-title h3 {
+    margin: 0;
+}
+
+.club-title > img {
+    width: 42px;
+    height: 42px;
+    object-fit: contain;
+    object-position: center;
+    display: block;
+}
+
+.career-achievements span {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.career-achievements span img {
+    width: 22px;
+    height: 15px;
+    object-fit: cover;
+}
+
+.career-detail {
+    max-width: 1200px;
+    margin: auto;
+    padding: 90px 30px;
+}
+
+.detail-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.detail-header h2 {
+    font-size: 58px;
+    margin-bottom: 10px;
+}
+
+.detail-period {
+    color: #d4af37;
+    font-size: 18px;
+}
+
+.detail-layout {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    gap: 50px;
+    align-items: start;
+}
+
+/* Wikipedia-style information box */
+
+.info-box {
+    background: #151515;
+    border: 1px solid #292929;
+    border-radius: 10px;
+    overflow: hidden;
+    position: sticky;
+    top: 30px;
+}
+
+.info-image {
+    width: 100%;
+    background: #101010;
+}
+
+.info-image img {
+    display: block;
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    object-position: center;
+}
+
+.info-box h3 {
+    font-size: 24px;
+    padding: 20px 20px 5px;
+}
+
+.info-role {
+    color: #d4af37;
+    padding: 0 20px 20px;
+    font-weight: bold;
+}
+
+.info-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    padding: 13px 20px;
+    border-top: 1px solid #292929;
+    font-size: 14px;
+}
+
+.info-row strong {
+    color: #999999;
+}
+
+.info-row span {
+    color: #eeeeee;
+    text-align: right;
+}
+
+/* Main content */
+
+.detail-content {
+    background: #111111;
+    border: 1px solid #242424;
+    border-radius: 10px;
+    padding: 40px;
+}
+
+.detail-content h3 {
+    font-size: 30px;
+    margin-bottom: 20px;
+    margin-top: 35px;
+}
+
+.detail-content h3:first-child {
+    margin-top: 0;
+}
+
+.detail-content p {
+    color: #bbbbbb;
+    font-size: 17px;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+/* Statistics */
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    margin-top: 25px;
+}
+
+.stat-box {
+    background: #191919;
+    border: 1px solid #292929;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+}
+
+.stat-box strong {
+    display: block;
+    font-size: 32px;
+    color: #d4af37;
+    margin-bottom: 8px;
+}
+
+.stat-box span {
+    color: #999999;
+    font-size: 14px;
+}
+
+/* Achievement */
+
+.achievement-box {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    background: #181818;
+    border: 1px solid #292929;
+    border-left: 4px solid #d4af37;
+
+    border-radius: 8px;
+
+    padding: 20px;
+
+    margin-top: 20px;
+}
+
+.achievement-icon {
+    font-size: 35px;
+}
+
+.achievement-box strong {
+    color: white;
+}
+
+.achievement-box p {
+    margin: 5px 0 0;
+    font-size: 14px;
+}
+
+/* Back button */
+
+.back-button {
+    display: inline-block;
+
+    margin-top: 40px;
+
+    padding: 13px 22px;
+
+    background: #d4af37;
+    color: #111111;
+
+    text-decoration: none;
+
+    font-weight: bold;
+
+    border-radius: 5px;
+
+    transition: 0.3s;
+}
+
+.back-button:hover {
+    background: #f0d05a;
+    transform: translateX(-4px);
+}
+
+/* Mobile */
+
+@media (max-width: 800px) {
+
+    .detail-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .info-box {
+        position: relative;
+        top: 0;
+        max-width: 400px;
+        margin: auto;
+    }
+
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .detail-header h2 {
+        font-size: 42px;
+    }
+}
+
+.career-year2::after {
+    content: "";
+
+    position: absolute;
+
+    right: -16px;
+    top: 38px;
+
+    width: 12px;
+    height: 12px;
+
+    background: #d4af37;
+
+    border-radius: 50%;
+
+    box-shadow: 0 0 0 5px #080808;
+}
+
+.trophies-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.trophy-box {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
+    padding: 18px;
+
+    background: #111;
+    border: 1px solid rgba(212, 175, 55, 0.25);
+    border-radius: 12px;
+
+    transition: 0.25s ease;
+}
+
+.trophy-box:hover {
+    transform: translateY(-3px);
+    border-color: #d4af37;
+}
+
+.trophy-icon {
+    font-size: 28px;
+}
+
+.trophy-info {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.trophy-info strong {
+    font-size: 16px;
+    color: white;
+}
+
+.trophy-info span {
+    font-size: 13px;
+    color: #aaa;
+}
+
+.trophy-image {
+    width: 55px;
+    height: 55px;
+    object-fit: contain;
+    flex-shrink: 0;
+}
+
+.club-title img[alt="Chelsea FC old logo"] {
+    width: 42px;
+    height: 42px;
+    object-fit: contain;
+}
+
+/* =========================
+   STATISTICS PAGE
+========================= */
+
+.statistics-table {
+    width: 100%;
+    overflow-x: auto;
+    margin-top: 25px;
+    margin-bottom: 45px;
+}
+
+.statistics-table table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #111;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.statistics-table th {
+    padding: 16px 12px;
+    background: #d4af37;
+    color: #111;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.statistics-table td {
+    padding: 14px 10px;
+    border-bottom: 1px solid #292929;
+    color: #eee;
+    text-align: center;
+    font-size: 14px;
+}
+
+.statistics-table tr:last-child td {
+    border-bottom: none;
+}
+
+.statistics-table tbody tr {
+    transition: 0.2s ease;
+}
+
+.statistics-table tbody tr:hover {
+    background: #1c1c1c;
+}
+
+.statistics-table td:first-child {
+    text-align: left;
+    font-weight: bold;
+    color: #d4af37;
+}
+
+
+/* Statistics update */
+
+.statistics-update {
+    margin-top: 10px;
+    margin-bottom: 35px;
+    color: #999;
+    font-size: 14px;
+    text-align: center;
+    letter-spacing: 0.5px;
+}
+
+
+/* Statistics note */
+
+.statistics-note {
+    margin-top: 40px;
+    padding: 20px;
+    border-left: 3px solid #d4af37;
+    background: #111;
+    color: #aaa;
+    border-radius: 8px;
+}
+
+.statistics-note p {
+    margin: 0;
+}
+
+
+/* Mobile */
+
+@media (max-width: 900px) {
+
+    .statistics-table {
+        overflow-x: auto;
+    }
+
+    .statistics-table table {
+        min-width: 950px;
+    }
+
+}
